@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,14 +83,60 @@
                     <view key="view" contentMode="scaleToFill" id="6SM-0n-Evr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OpN-Yt-upm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.62596318490000002" green="0.6931988442" blue="0.947265625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z7g-BC-UbS">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCell" id="bhl-bt-duw" customClass="RecipeCell" customModule="LovelyMeal" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Bx-jV-6Q8">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E79-bM-wX4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="E79-bM-wX4" secondAttribute="trailing" id="9bJ-I7-AfC"/>
+                                                <constraint firstItem="E79-bM-wX4" firstAttribute="top" secondItem="5Bx-jV-6Q8" secondAttribute="top" id="aqs-fW-AM0"/>
+                                                <constraint firstItem="E79-bM-wX4" firstAttribute="leading" secondItem="5Bx-jV-6Q8" secondAttribute="leading" id="ert-vP-chL"/>
+                                                <constraint firstAttribute="bottom" secondItem="E79-bM-wX4" secondAttribute="bottom" id="z0l-Mf-UO5"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="150"/>
+                                        <connections>
+                                            <outlet property="recipeImage" destination="E79-bM-wX4" id="lVt-iC-a00"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OpN-Yt-upm" firstAttribute="trailing" secondItem="fRm-Hs-4Kd" secondAttribute="trailing" id="QCo-31-moP"/>
+                            <constraint firstItem="OpN-Yt-upm" firstAttribute="leading" secondItem="fRm-Hs-4Kd" secondAttribute="leading" id="Xuw-c1-gAu"/>
+                            <constraint firstItem="OpN-Yt-upm" firstAttribute="top" secondItem="fRm-Hs-4Kd" secondAttribute="top" id="f7b-Pa-j9c"/>
+                            <constraint firstAttribute="bottom" secondItem="OpN-Yt-upm" secondAttribute="bottom" id="y4H-2w-MOd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fRm-Hs-4Kd"/>
                     </view>
                     <navigationItem key="navigationItem" id="MS8-Xu-2bH"/>
+                    <connections>
+                        <outlet property="collectioView" destination="OpN-Yt-upm" id="Pnd-zF-vWz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYs-Y6-RD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928" y="130"/>
+            <point key="canvasLocation" x="1927.5362318840582" y="129.91071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DDl-cZ-7fU">
