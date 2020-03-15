@@ -7,19 +7,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LovelyMeal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="LovelyMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nMQ-X4-g54">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nMQ-X4-g54">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.62596318490000002" green="0.6931988442" blue="0.947265625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="200" id="PbW-ao-sAn" customClass="CategoryCell" customModule="LovelyMeal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="200" id="PbW-ao-sAn" customClass="CategoryCell" customModule="LovelyMeal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PbW-ao-sAn" id="VIR-9P-bpQ">
@@ -27,26 +27,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger5" translatesAutoresizingMaskIntoConstraints="NO" id="jks-Rs-gam">
-                                                    <rect key="frame" x="6" y="0.0" width="402" height="194"/>
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="192"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXF-mE-Uru">
                                                     <rect key="frame" x="20" y="68" width="374" height="64"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
-                                                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="jks-Rs-gam" secondAttribute="trailing" constant="6" id="XGL-yw-OkN"/>
+                                                <constraint firstAttribute="trailing" secondItem="jks-Rs-gam" secondAttribute="trailing" constant="8" id="XGL-yw-OkN"/>
                                                 <constraint firstItem="jks-Rs-gam" firstAttribute="top" secondItem="VIR-9P-bpQ" secondAttribute="top" id="gA2-TP-Nvp"/>
                                                 <constraint firstItem="bXF-mE-Uru" firstAttribute="centerY" secondItem="VIR-9P-bpQ" secondAttribute="centerY" id="jfQ-tn-8mm"/>
                                                 <constraint firstItem="bXF-mE-Uru" firstAttribute="leading" secondItem="VIR-9P-bpQ" secondAttribute="leading" constant="20" id="poP-yv-BtW"/>
-                                                <constraint firstAttribute="bottom" secondItem="jks-Rs-gam" secondAttribute="bottom" constant="6" id="qjk-0M-60Z"/>
-                                                <constraint firstItem="jks-Rs-gam" firstAttribute="leading" secondItem="VIR-9P-bpQ" secondAttribute="leading" constant="6" id="wCL-7q-tLs"/>
+                                                <constraint firstAttribute="bottom" secondItem="jks-Rs-gam" secondAttribute="bottom" constant="8" id="qjk-0M-60Z"/>
+                                                <constraint firstItem="jks-Rs-gam" firstAttribute="leading" secondItem="VIR-9P-bpQ" secondAttribute="leading" constant="8" id="wCL-7q-tLs"/>
                                                 <constraint firstAttribute="trailing" secondItem="bXF-mE-Uru" secondAttribute="trailing" constant="20" id="xWf-c9-qeW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.62596318490000002" green="0.6931988442" blue="0.947265625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="categoryImage" destination="jks-Rs-gam" id="sAD-KO-bFx"/>
                                             <outlet property="categoryTitleLbl" destination="bXF-mE-Uru" id="AEP-2u-uY6"/>
@@ -67,11 +68,28 @@
                     <navigationItem key="navigationItem" id="kTt-iY-gGB"/>
                     <connections>
                         <outlet property="tableView" destination="nMQ-X4-g54" id="66J-uW-Cuj"/>
+                        <segue destination="MeR-iX-TF4" kind="show" identifier="toRecipesSelection" id="cfB-1k-4xl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Recipes SelectionVC-->
+        <scene sceneID="4K6-6N-cF8">
+            <objects>
+                <viewController id="MeR-iX-TF4" customClass="RecipesSelectionVC" customModule="LovelyMeal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6SM-0n-Evr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fRm-Hs-4Kd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MS8-Xu-2bH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYs-Y6-RD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DDl-cZ-7fU">
@@ -81,6 +99,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ylf-zX-zoH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.62596318490000002" green="0.6931988442" blue="0.947265625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
